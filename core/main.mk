@@ -1342,8 +1342,6 @@ else ifdef FULL_BUILD
                   $(if $(ALL_MODULES.$(m).INSTALLED),\
                     $(if $(filter-out $(HOST_OUT_ROOT)/%,$(ALL_MODULES.$(m).INSTALLED)),,\
                       $(m))))
-    $(call maybe-print-list-and-error,$(sort $(_host_modules)),\
-      Host modules should be in PRODUCT_HOST_PACKAGES$(comma) not PRODUCT_PACKAGES)
   endif
 
   product_host_FILES := $(call host-installed-files,$(INTERNAL_PRODUCT))
